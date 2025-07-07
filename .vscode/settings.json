@@ -1,0 +1,6 @@
+{
+    "livePreview.defaultPreviewPath": "/contact.html",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 0,
+    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+}
