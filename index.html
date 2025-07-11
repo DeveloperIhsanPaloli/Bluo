@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!-- Nav -->
+
+    <style>
+        /* Scrollbar track */
+::-webkit-scrollbar {
+  width: 15px; /* or height for horizontal */
+}
+
+/* Track background */
+::-webkit-scrollbar-track {
+  background: #e0d7d7;
+  border-radius: 10px;
+  
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #96999a;
+  border-radius: 5px;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #37517e;
+}
+
+    </style>
+    
+         <style>
+            
+        body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* Hamburger Icon */
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      background: #ffffff;
+      border-radius: 2px;
+      transition: 0.4s;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background-color: #37517e;
+      color: white;
+      padding: 60px 20px;
+      transition: 0.4s ease-in-out;
+      z-index: 1000;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 30px 0;
+    }
+
+    .sidebar ul li a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #47b2e4;
+      transition: 0.3s;
+    }
+  </style>
+    </style>
+    <style>
+        *{
+            font-family: 'Montserrat', sans-serif;
+        }
+        .container-fluid {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        .body,html{
+            overflow-x: hidden    ;
+            scroll-behavior: smooth;
+        }
+        .nav{
+            background-color: #37517e;
+            color: #fff;
+            width: 100%;
+            height: 13vh;
+            display: flex;
+            justify-content: center;
+           
+            
+        }
+        
+        .logo{
+            font-size: 2rem;
+            font-weight: 650;
+            color: #fff !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;    
+            justify-content: center;
+            margin-top: 10px;
+            margin-left: -100px;
+        }
+        .opt .navbar-nav .nav-link{
+            color: #fff !important;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .navbar-nav{
+            display: flex;
+            gap: 30px;
+        }
+        .opt .navbar-nav .nav-link span {
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+        }
+        .opt .navbar-nav .nav-link:hover span {
+            color: #47b2e4 !important;
+            transform: translateY(-5px);
+        }
+        
+        
+    </style>
+    <!-- Intro -->
+        <style>
+            .intro{
+                background-color: #37517e;
+                height: 70vh;
+                width: 100%;
+                
+            }
+            .intro1 {
+                margin-top: 40px;
+                margin-left: 0px;
+                animation: scaleUp 1.5s ease-in-out;
+                
+            }
+            .txt-1{
+                color: #fff;
+                font-weight: 700;
+                font-size: 3rem;
+            }
+            .txt-2{
+                color: #928f8f;
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+            .btn{
+                background-color: #47b2e4;
+                color: #fff;
+                border: none;
+                border-radius: 50px;
+                padding: 10px 20px;
+            }
+            .btn:hover,.btn:active{
+                background-color: #2c8ebb;
+                color: #fff;
+                border: none;
+            }
+            /* Intro section 2 */
+            .intro2 {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                height: 100%;
+            }
+            .intro2 img{
+                width: 85%;
+                height: 100%;
+                position: relative;
+                top: 30px;
+                animation: float 2s ease-in-out infinite, scaleUp 1.5s ease-in-out;
+                
+            }
+            @keyframes float {
+                0% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+                100% {
+                    transform: translateY(0px);
+                }
+                
+            }
+            @keyframes scaleUp {
+                0% {
+                    transform: scale(0.5);
+                    opacity: 0;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+
+            /* Mobile-sideBar */
+
+            .navbar-toggler{
+                display: visible;
+                left: -100%;
+            }
+            
+                
+        </style>
+     <!-- Intro section 3 -->
+     <style>
+        .intro3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+            width: 100%;
+            animation: scaleUp 1.5s ease-in-out;
+        }
+        .intro3 img{
+            margin-left: 50px;
+            width: 30%;
+            height: 100%;
+            filter: grayscale(100%);
+           
+        }
+        .intro3 img:hover{  
+            transition: all 0.3s ease-in-out;
+            filter: grayscale(0%);  
+            animation: scaleUp1 1.5s ease-out ;
+        }
+        @keyframes scaleUp1 {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+     </style>
+     <!-- About -->
+     <style>
+        
+        .about{
+            height: 120vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+        }
+        .about-hd{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            color: #37517e;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .hr-1{
+            width: 150px;
+            height: 1px;
+            background-color: #c4c4c4;
+        }
+        .hr-2{
+            width: 50px;
+            height: 2.5px;
+            background-color: #307fb7;
+            margin-top: -18.5px;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .about1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            animation: 2s side-left ease;
+            
+        }
+        .about1 img{
+            width: 90%;
+            animation: float 6s ease-in-out infinite;
+            
+        }
+        .about2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding-left: 50px;
+            animation: side-right 2s ease;
+        }
+        .about2 h3{
+            font-size: 2rem;
+            font-weight: 600;
+            color: #37517e;
+            margin-top: 30px;
+        }
+        .about2 p{
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+        .about-collapse {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .about-collapse-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .about-collapse-question {
+            padding: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: #37517e;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .about-collapse-question:hover {
+            background: #f8f9fa;
+        }
+        .about-collapse-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0 15px;
+            color: #6c757d;
+            font-size: 0.9rem;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        .about-collapse-item.active .about-collapse-answer {
+            max-height: 170px;
+            padding: 0 15px 15px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .about-collapse-item.active .about-collapse-question {
+            background: #47b2e4;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .about-collapse-question::after {
+            content: '+';
+            font-size: 20px;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .about-collapse-item.active .about-collapse-question::after {
+            transform: rotate(45deg);
+        }
+     </style>
+     <!-- Services -->
+     <style>
+        .services{
+            height: 130vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+        .services-hd{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            color: #37517e;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .services-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 0;
+            animation: scaleUp 2s ease;
+        }
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-card i {
+            font-size: 40px;
+            color: #47b2e4;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            color: #37517e;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .service-card p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+     </style>
+     <!-- Know More -->
+     <style>
+        .percent{
+        
+        color: #37517e;
+        font-weight: 600;
+        margin-left: 200px;
+        }
+        .know-more{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            overflow: hidden;
+            
+        }
+        .km-1 img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90%;
+            width: 90%;
+            margin-top: 50px;
+        }
+        
+        .km-2{
+            display: flex;
+            
+            flex-direction: column;
+            height: 100%;
+            margin-top: 50px;
+            
+        }
+        .km-2 h3{
+            font-size: 2rem;
+            font-weight: 600;
+            color: #37517e;
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 30px;
+        }
+        .km-2 p{
+            font-size: 1rem;
+            color: #6c757d;
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+        .hd-hr-1{
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+        .hd-hr-1 p{
+            font-size: 1rem;
+            color: #37517e;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .hr-hd-1-1{
+            display: flex;
+            justify-content: flex-start;
+            width: 60%;
+            height: 10px;
+            background-color: #919192;
+            border-radius: 50px;
+            margin-left: 10px;
+        }
+        .hr-hd-1-2{
+            display: flex;
+            justify-content: flex-start;
+            width: 95%;
+            height: 10px;
+            border-radius: 50px;
+            background-color: #307fb7;
+            animation: width1 3s ease-in-out;
+        }
+        .hd-hr-2{
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 5px;
+            font-size: 1rem;
+            color: #47b2e4 !important;
+            font-weight: 600;
+            margin-left: 15px;
+        }
+        .hr-hd-2-1{
+            display: flex;
+            justify-content: flex-start;
+            width: 60%;
+            height: 10px;
+            background-color: #919192;
+            border-radius: 50px;
+            margin-left: 10px;
+        }
+        .hr-hd-2-2{
+            display: flex;
+            justify-content: flex-start;
+            width: 90%;
+            height: 10px;
+            border-radius: 50px;
+            background-color: #307fb7;
+            animation: width2 3s ease-in-out;
+        }
+        @keyframes width1{
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 95%;
+            }
+        }
+        @keyframes width2{
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 90%;
+            }
+        }
+        @keyframes width3{
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 85%;
+            }
+        }
+        @keyframes width4{
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 80%;
+            }
+        }
+     </style>
+     <!-- Quote -->
+      <style>
+        .quote{
+            height: 50vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #5778b0 ;
+            color: #fff;
+        }
+        .quote-content h3{
+            font-weight: 600;
+            
+            margin-bottom: 40px;
+        }
+        .quote-content p{
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+        .quote-content h4{
+            font-size: 1.3rem;
+            margin-top: -20px;
+            margin-left: 10px;
+        }
+        .quote-content button{
+            margin-top: 30px;
+            border-radius: 50px;
+            width: 150px;
+            height: 40px;
+            border: 2px solid #fff;
+            color: #fff;
+            background-color: #5778b0;
+            outline: none;
+        }
+        .quote-content button:hover{
+            background-color: #fff;
+            color: #5778b0;
+            border: 2px solid #5778b0;
+            outline: none;
+            transition: .3s;
+        }
+      </style>
+      <!-- Process -->
+      <style>
+        .process{
+            height: 260vh;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat',sans-serif;
+            flex-direction: column;
+            margin-top: -350px;
+        }
+        
+        .circle{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #37517e;
+            margin-top: 0px;
+            margin-left: -26px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        .box-1{
+            width: 900px;
+            height: 150px;
+            border-bottom-left-radius: 10px;
+            border-left: 4px solid #37517e;
+            border-bottom: 4px solid #37517e ;
+        }
+        .box-1-1{
+            width: 900px;
+            height: 150px;
+            border-bottom-left-radius: 10px;
+            border-left: 4px solid #37517e;
+            border-bottom: 4px solid #37517e ;
+        }
+        .box-2-1{
+           width: 900px;
+            height: 250px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-right: 4px solid #37517e;
+            border-bottom: 4px solid #37517e ;
+            border-top: 1px solid #37517e;
+            margin-top: -4px;
+            margin-left: 10px;
+        }
+        .box-texts{
+            margin-top: -50px;
+            margin-left: 50px;
+        }
+        .box-text-2{
+            margin-top: -50px;
+            margin-left: 50px;
+        }
+        .box-2{
+            width: 900px;
+            height: 250px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-right: 4px solid #37517e;
+            border-bottom: 4px solid #37517e ;
+            border-top: 1px solid #37517e;
+            margin-top: -4px;
+            margin-left: 10px;
+        }
+        .box-texts-3{
+            padding-top: 20px;
+            margin-left: 50px;
+        }
+        .box-texts-4{
+            margin-top: -50px;
+            margin-left: 50px;
+        }
+        .pr-hd{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            text-transform: uppercase;
+            color: #37517e;
+            margin-top: -50px;
+            margin-bottom:100px;
+            margin-right:450px ;
+        }
+    </style>
+      <!-- FAQ -->
+      <style>
+        *{
+            font-family: 'Montserrat', sans-serif;
+        }
+        .faq{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+            background-color: #f3f5fa;
+        }
+        .faq-hd{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            color: #37517e;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .faq-content {
+            width: 100%;
+            margin-top: 50px;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: side-right 2s ease;
+        }
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #37517e;
+            transition: all 0.3s ease;
+        }
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 0 20px;
+            color: #6c757d;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 20px 20px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .faq-item.active .faq-question {
+            background: #47b2e4;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+    </style>
+
+    <!-- Contact -->
+    <style>
+        .contact {
+            width: 100%;
+            background-color: #e3f2fd;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+            }
+
+
+            .contact h2 {
+            text-align: center;
+            color: #37517e;
+            text-transform: uppercase;
+            font-weight: 650;
+            margin-bottom: 20px;
+            }
+
+            .line-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            }
+
+            .line-cont-1 {
+            width: 5vw;
+            height: 2px;
+            background-color: #6c757d;
+            margin-right: -70px;
+            }
+
+            .line-cont-2 {
+            width: 2vw;
+            height: 4px;
+            background-color: #2e8dd1;
+            }
+
+            .contact-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 100px;
+            }
+
+            .i-cont-1,
+            .i-cont-2 {
+            width: 750px;
+            background-color: #ffffff;
+            border-top: 3px solid #47b2e4;
+            border-bottom: 3px solid #47b2e4;
+            border-radius: 10px;
+            box-shadow: 4px 5px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 750px;
+            flex: 1;
+            animation: scaleUp 2s ease;
+            }
+
+            .icon-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            }
+
+            .icon-group i {
+            color: #3ebce2;
+            background-color: #caecfa;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            margin-right: 15px;
+            }
+
+            .icon-text p {
+            margin: 2px 0;
+            color: #555e61;
+            }
+
+            .icon-text .label {
+            font-weight: bold;
+            font-size: 1.1rem;
+            }
+
+            .map-container {
+            margin-top: 20px;
+            }
+
+            form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            }
+
+            .form-group {
+            display: flex;
+            flex-direction: column;
+            }
+
+            form input,
+            form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+            }
+
+            form textarea {
+            height: 150px;
+            }
+
+            form button {
+            align-self: center;
+            padding: 10px 30px;
+            font-size: 1rem;
+            background-color: #3ebce2;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            }
+
+            form button:hover {
+            background-color: #2ca6c7;
+            }
+
+
+    </style>
+    <!-- footer -->
+     <style>
+        .footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 8vh;
+            background-color: #37517e;
+            color: #fff;
+        }
+     </style>
+
+     <!-- keyframes -->
+      <style>
+        @keyframes side-left{
+            0%{
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes side-right{
+            0%{
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+      </style>
+    
+</head>
+<body>
+    
+<header>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="nav " id="home">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-2">
+                                <div class="logo">
+                                   <p><a href="#" style="text-decoration: none; color: #fff;">Bluo</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="opt">
+                                <nav class="navbar  navbar-expand-lg navbar-dark">
+                                    
+                                    </button>
+                                  
+                                    <div class="collapse  navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="#home"><span style="transition-delay: 0ms;">H</span><span style="transition-delay: 50ms;">O</span><span style="transition-delay: 100ms;">M</span><span style="transition-delay: 150ms;">E</span><span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="#about"><span style="transition-delay: 0ms;">A</span><span style="transition-delay: 50ms;">B</span><span style="transition-delay: 100ms;">O</span><span style="transition-delay: 150ms;">U</span><span style="transition-delay: 200ms;">T</span><span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="#services"><span style="transition-delay: 0ms;">S</span><span style="transition-delay: 50ms;">E</span><span style="transition-delay: 100ms;">R</span><span style="transition-delay: 150ms;">V</span><span style="transition-delay: 200ms;">I</span><span style="transition-delay: 250ms;">C</span><span style="transition-delay: 300ms;">E</span><span style="transition-delay: 350ms;">S</span><span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="#process"><span style="transition-delay: 0ms;">P</span><span style="transition-delay: 50ms;">R</span><span style="transition-delay: 100ms;">O</span><span style="transition-delay: 150ms;">C</span><span style="transition-delay: 200ms;">E</span><span style="transition-delay: 250ms;">S</span><span style="transition-delay: 300ms;">S</span><span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="#faq"><span style="transition-delay: 0ms;">F</span><span style="transition-delay: 50ms;">A</span><span style="transition-delay: 100ms;">Q</span><span style="transition-delay: 150ms;">'</span><span style="transition-delay: 200ms;">S</span><span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="#contact"><span style="transition-delay: 0ms;">C</span><span style="transition-delay: 50ms;">O</span><span style="transition-delay: 100ms;">N</span><span style="transition-delay: 150ms;">T</span><span style="transition-delay: 200ms;">A</span><span style="transition-delay: 250ms;">C</span><span style="transition-delay: 300ms;">T</span><span class="sr-only">(current)</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <!-- Mobile - Nav -->
+         <div class="menu-toggle" id="menuBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sideNav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const sidebar = document.getElementById('sideNav');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+      sidebar.classList.toggle('open');
+    });
+  </script>
+
+    </header>
+
+    <section>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="intro" id="home">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="intro1">
+                                    <p class="txt-1">Better Solutions For <br> Your Business</p>
+                                    <p class="txt-2">We are team of talented designers making <br> websites for you</p>
+                                    <button class="btn">Get Started</button>
+                                </div>
+                            </div> 
+                            <div class="col-md-6">
+                                <div class="intro2">
+                                    <img src="https://hishampaloli.github.io/bluo/img/hero-img.png" alt="hero-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="intro3" id="home">
+                <div class="col-md-2">
+                    <img src="https://hishampaloli.github.io/bluo/img/clinets/client-1.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://hishampaloli.github.io/bluo/img/clinets/client-2.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://hishampaloli.github.io/bluo/img/clinets/client-3.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://hishampaloli.github.io/bluo/img/clinets/client-4.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://hishampaloli.github.io/bluo/img/clinets/client-5.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="https://hishampaloli.github.io/bluo/img/clinets/client-6.png" alt="">
+                </div>
+            </div>
+         </div>
+       </div>
+    </section>
+    <section>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="about" id="about">
+                    <h2 class="about-hd">About Us</h2>
+                    <hr class="hr-1"> <hr class="hr-2">
+                    <div class="container">
+                        <div class="row about-content">
+                            <div class="col-md-6">
+                                <div class="about1">
+                                    <img src="https://hishampaloli.github.io/bluo/img/why-us.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about2">
+                                    <h3>We are here for you for <br> all your digital solutions</h3>
+                                    <p>We are here to make use of the digital space as the market platform to reach all around the world.</p>
+                                    <div class="about-collapse">
+                                        <div class="about-collapse-item">
+                                            <div class="about-collapse-question">Our Mission</div>
+                                            <div class="about-collapse-answer">
+                                                To provide innovative digital solutions that empower businesses to thrive in the digital age.
+                                            </div>
+                                        </div>
+                                        <div class="about-collapse-item">
+                                            <div class="about-collapse-question">Our Vision</div>
+                                            <div class="about-collapse-answer">
+                                                To be the leading digital transformation partner for businesses worldwide.
+                                            </div>
+                                        </div>
+                                        <div class="about-collapse-item">
+                                            <div class="about-collapse-question">Our Values</div>
+                                            <div class="about-collapse-answer">
+                                                Innovation, Excellence, Integrity, and Customer Success drive everything we do.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+     <section >
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="services" id="services">
+                    <h2 class="services-hd">Services</h2>
+                    <hr class="hr-1"> <hr class="hr-2">
+                    <div class="container">
+                        <div class="services-content">
+                            <div class="service-card">
+                                <i class="fas fa-laptop-code"></i>
+                                <h3>Web Development</h3>
+                                <p>Custom website development with modern technologies and responsive design.</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h3>Mobile Apps</h3>
+                                <p>Native and cross-platform mobile applications for iOS and Android.</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-paint-brush"></i>
+                                <h3>UI/UX Design</h3>
+                                <p>Creative and user-friendly interface design for web and mobile applications.</p>
+                            </div>
+                            <div class="service-card">
+                                <i class="fas fa-search"></i>
+                                <h3>SEO Optimization</h3>
+                                <p>Search engine optimization to improve your website's visibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Know More -->
+     <section>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="know-more">
+                    <div class="col-md-6">
+                        <div class="km-1">
+                            <img src="https://hishampaloli.github.io/bluo/img/skills.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="km-2">
+                            <h3>Know More</h3>
+                            <p>See our skills voted by our clients</p>
+                            <div class="hd-hr-1">
+                                <p>Web Development & Desing <span id="q" class="percent" >95%</span>
+                            </div>
+                            
+                                <div class="hr-hd-1-1">
+                                <div class="hr-hd-1-2">
+                                </div></div>
+                                    <div class="hd-hr-2">
+                                        <p style="color: #37517e;">Digital Marketing <span id="w" style="margin-left: 285px;" class="percent">90%</span>
+                                   </div>
+                                    <div class="hr-hd-2-1">
+                                        <div class="hr-hd-2-2"></div>
+                                    </div>
+                                    <div class="hd-hr-2">
+                                        <p style="color: #37517e;">Business Consultancy <span id="e" style="margin-left: 250px;" class="percent">85%</span>
+                                    </div>
+                                    <div class="hr-hd-2-1">
+                                        <div class="hr-hd-2-2"  style="animation: width3 3s ease-in-out;"></div>
+                                    </div>
+                                    <div class="hd-hr-2">
+                                        <p style="color: #37517e;">Branding & Advertising  <span id="r" style="margin-left: 240px;" class="percent">80%</span>
+                                    </div>
+                                    <div class="hr-hd-2-1">
+                                        <div class="hr-hd-2-2" style="animation: width4 3s ease-in-out;"></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Quote -->
+     <section> 
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="quote">
+                        <div class="quote-content">
+                            <h3>Can't Wait Get a Quote</h3>
+                            <p>"There is only one boss 'The customer'.And he can fire everybody in the company,simply by spending his money somewhere else"</p>
+                            <h4>-Sam Walton</h4>
+
+                            <button>Get a Quote</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Process -->
+
+     <section>
+        <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="process" id="process">
+                   <div class="process-content">
+                     <div class="pr-hd hello" style="margin-left: 400px;">
+                            <h2 style="font-weight: bold;">Process</h2>
+                            
+                            <div class="mr-hd hello" style="height: 1px;background-color: #6c757d;width: 100px;margin-top: 60px;margin-left: -130px;">
+                                <div class="mr-hd-1 hello" style="height: 3px;background-color: #37517e;width: 40px;margin-left:27px;margin-top: -1px;"></div></div>
+                                <p class="mrr hello" style="color:#928f8f;text-transform: none;margin-top: 90px;margin-left: -180px;">Go through our working process</p>
+                                 
+                                
+                        </div>
+                    <div class="box-1 hello">
+                        <div class="circle hello">1</div>
+                        <div class="box-texts hello" >
+                                <h3>PROCESS PLANNING</h3>
+                                <p>Determining the most appropriate Marketing processes and the sequence in <span class="hi"><br></span> which they should be performed to produce a given part or product specified <span class="hi"><br></span> by designed Engineering</p>
+                            </div>
+                    </div>
+                    <div class="box-2 hello">
+                        <div class="circle hello" style="margin-left: 870px;margin-top: 100px;">2</div>
+                        <div class="box-texts-2 hello" style="margin-top: -70px;margin-right: 70px;text-align: right;" >
+                                 <h3>ADVERTISING</h3>
+                                <p>Marketing communication that employs an openly sponsored, non-personal <span class="hi"><br></span>message to promote or sell a product, service or idea. Sponsors of advertising <span class="hi"><br></span> are typically businesses wishing to promote their products or services.</p>
+                            </div>
+                            <div class="box-1-1 hello" style="height: 250px; border-top-left-radius:10px ;margin-top: 51px;margin-left: -5px;">
+                        <div class="circle hello" style="position: relative;;top: 100px;">3</div>
+                        <div class="box-texts-3 hello">
+                                <h3>MARKETING</h3>
+                                <p>Marketing is the activity, set of institutions, and processes for creating, <span class="hi"><br></span>communicating, delivering, and exchanging offerings that have value <span class="hi">br</span> for customers, clients, partners, and society at large.</p>
+                            </div>
+                    </div>
+                    <div class="box-2-1 hello" style="border-bottom: none; border-bottom-right-radius: none;margin-left: -1px; height: 150px;">
+                        <div class="circle hello" style="margin-left: 875px;margin-top: 100px;">4</div>
+                        <div class="box-texts-4 hello" style="margin-top: -130px; text-align: right; margin-right: 70px;" >
+                                 <h3>BRANDING</h3>
+                                <p>Determining the most appropriate Marketing processes and the sequence in <span class="hi"><br></span> which they should be performed to produce a given part or product specified <span class="hi"><br></span> by designed Engineering</p>
+                           </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+     </section>
+
+     <!-- FAQ -->
+     <section>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="faq" id="faq">
+                    <h2 class="faq-hd">Frequently Asked Questions</h2>
+                    <hr class="hr-1"> <hr class="hr-2">
+                    <div class="container">
+                        <div class="faq-content">
+                            <div class="faq-item">
+                                <div class="faq-question">What services do you offer?</div>
+                                <div class="faq-answer">
+                                    We offer a wide range of digital services including web development, mobile app development, UI/UX design, digital marketing, and cloud solutions.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">How long does it take to complete a project?</div>
+                                <div class="faq-answer">
+                                    Project timelines vary depending on the scope and complexity. A typical website project can take 4-8 weeks, while more complex applications may take 3-6 months.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Do you provide ongoing support?</div>
+                                <div class="faq-answer">
+                                    Yes, we offer comprehensive maintenance and support packages to ensure your digital solutions continue to perform optimally after launch.
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">What is your pricing structure?</div>
+                                <div class="faq-answer">
+                                    Our pricing is project-based and depends on your specific requirements. We provide detailed quotes after understanding your needs and project scope.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact -->
+     <!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Contact</h2>
+
+    <div class="line-wrapper">
+      <div class="line-cont-1"></div>
+      <div class="line-cont-2"></div>
+    </div>
+
+    <div class="contact-section">
+      
+      <!-- Left Box -->
+      <div class="i-cont-1">
+        <div class="icon-group">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="icon-text">
+            <p class="label">Location :</p>
+            <p>Malappuram, Kerala, India</p>
+          </div>
+        </div>
+
+        <div class="icon-group">
+          <i class="fas fa-envelope"></i>
+          <div class="icon-text">
+            <p class="label">Email :</p>
+            <p>kuh241337@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="icon-group">
+          <i class="fas fa-phone"></i>
+          <div class="icon-text">
+            <p class="label">Call :</p>
+            <p>7511XXX</p>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31325.514586043315!2d76.04779216202476!3d11.061903121144738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64a9be29b058f%3A0x23e371e0d4c30d8e!2sMalappuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1750390371090!5m2!1sen!2sin"
+            width="220"
+            height="220"
+            style="border:0; border-radius: 10px;"
+            allowfullscreen=""
+            
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Right Box -->
+      <div class="i-cont-2" style="width: 750px;">
+        <form action="https://formspree.io/f/xrbkaoow" method="POST">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input name="Name" required type="text">
+          </div>
+
+          <div class="form-group">
+            <label>Your Email</label>
+            <input name="Email" required type="email">
+          </div>
+
+          <div class="form-group">
+            <label>Subject</label>
+            <input name="Subject" required type="text">
+          </div>
+
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="Message" required></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+     <footer>
+        <div class="footer">
+            <p>&#169; Copyright Reserved</p>
+        </div>
+    </footer> 
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ...></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.about-collapse-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const collapseItem = question.parentElement;
+                const isActive = collapseItem.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.about-collapse-item').forEach(item => {
+                    if (item !== collapseItem) {
+                        item.classList.remove('active');
+                        const answer = item.querySelector('.about-collapse-answer');
+                        answer.style.maxHeight = '0';
+                        answer.style.opacity = '0';
+                        answer.style.transform = 'translateY(-10px)';
+                    }
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    collapseItem.classList.add('active');
+                    const answer = collapseItem.querySelector('.about-collapse-answer');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.opacity = '1';
+                    answer.style.transform = 'translateY(0)';
+                } else {
+                    collapseItem.classList.remove('active');
+                    const answer = collapseItem.querySelector('.about-collapse-answer');
+                    answer.style.maxHeight = '0';
+                    answer.style.opacity = '0';
+                    answer.style.transform = 'translateY(-10px)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                const answer = faqItem.querySelector('.faq-answer');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                        const otherAnswer = item.querySelector('.faq-answer');
+                        otherAnswer.style.maxHeight = '0';
+                        otherAnswer.style.opacity = '0';
+                        otherAnswer.style.transform = 'translateY(-10px)';
+                    }
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.opacity = '1';
+                    answer.style.transform = 'translateY(0)';
+                } else {
+                    faqItem.classList.remove('active');
+                    answer.style.maxHeight = '0';
+                    answer.style.opacity = '0';
+                    answer.style.transform = 'translateY(-10px)';
+                }
+            });
+        });
+    </script>
+     
+   
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,754 @@
+@media  (min-width : 992px) and (max-width : 1199.98px) {
+    /* intro */
+    .intro{
+        height: 70vh !important;
+    }
+    .menu-toggle{
+        display: none;
+    }
+    .txt-1{
+        font-size: 2rem !important;
+        margin-top: 60px;
+    }
+    .txt-2{
+        font-size: 1rem !important;
+    }
+
+    /* About */
+    .about{
+        height: 120vh !important;
+    }
+    /* service */
+    .services{
+        height: 130vh !important;
+        background-color: #f8f9fa;
+    }
+
+    /* Know more */
+    .know-more{
+        height: 80vh !important;
+    }
+    .hd-hr-1 p{
+        font-size: .7rem !important;
+
+    }
+    .percent{
+        margin-left: 100px !important;
+    }
+    .hd-hr-2 p{
+        font-size: .7rem !important;
+    }
+    .km-1 img{
+        margin-top: 80px;
+    }
+    #q{
+        margin-left: 90px !important;
+    }
+    #w{
+        margin-left: 135px !important;
+    }
+    #e{
+        margin-left: 110px !important;
+    }
+    #r{
+        margin-left: 100px !important;
+    }
+
+    /* Quote */
+    .quote-content h3,p,h4,button{
+        margin-left: 50px !important;
+    }
+    .quote-content p{
+        font-size: .9rem !important;
+    }
+    .quote-content button{
+        margin-top: 20px !important;
+    }
+    /* Process */
+
+    .process{
+        height: 250vh !important;
+    }
+    .pr-hd p{
+        margin-left: -200px !important;
+    }
+    .pr-hd h2{
+        margin-left: -100px;
+    }
+    .pr-hd{
+        margin-left: 550px !important;
+    }
+
+    /* FAQ */
+
+    .faq{
+        height: 100vh !important;
+    }
+
+    /* Contact */
+    
+    .line-cont-1{
+        margin-left: -30px;
+        width: 100px !important;
+    }
+    .line-cont-2{
+        margin-left: .001px !important;
+        width: 50px !important;
+    }
+
+}
+
+@media  (max-width: 600px) {
+
+    /* header */
+    .logo{
+        margin-left: -70% !important;
+        margin-top: 10px !important;
+    }
+    
+    
+        .navbar-toggler{
+           margin-left: 85% ;
+           margin-top: 10px;
+        }   
+        .toggler{
+            display: block;
+            overflow-x: hidden;
+        }
+        /* Intro */
+        .intro{
+            height: 75vh !important;
+        }
+        .intro2 img{
+            position: relative;
+            top: -230px !important;
+            font-size: 10rem !important;
+            right: 40px !important;
+        }
+        .txt-1{
+            font-size: 2rem !important;
+            position: relative;
+            top: 280px !important;
+        }
+        .txt-2{
+            font-size: 1rem !important;
+            position: relative;
+            top: 290px !important;
+        }
+        .btn{
+            position: relative;
+            top: 290px !important;
+        }
+        .intro1{
+            margin-left: 30px !important;
+            position: relative;
+            top: 50px  !important;
+        }
+        .intro3 img{
+            scale: 3 !important;
+            display: flex;
+            justify-content: space-between !important;
+            position: relative;
+            left: 23px;
+        }
+        /* About */
+
+        .about{
+            height: 110vh !important;
+        }
+        
+        /* Service */
+
+        .services{
+            height: 150vh !important;
+        }
+
+        /* Know more */
+
+        .know-more{
+            height: 110vh !important;
+        }
+        .km-1 img{
+            height: 30vh !important;
+            width: 90vw !important;
+            margin-left: 30px;
+        }
+        .km-2{
+            position: relative;
+            top: 35% !important;
+            right: 95% !important;
+        }
+        .hd-hr-1 p{
+            font-size: 1rem !important;
+        }
+        .hd-hr-1 p span{
+            position: relative;
+            right: 100px;
+        }
+        .percent{
+            position: relative;
+            right: 100px !important;
+        }
+
+        /* Quote */
+
+        .quote-content{
+            margin-left: 3% !important;
+        }
+
+        /* FAQ */
+        .faq{
+            height: 90vh !important;
+        }
+        .faq-hd{
+            margin-left: 15% !important;
+            font-size: 1.5rem !important;
+        }
+        .faq-item{
+            width: 90% !important;
+            margin-left: 4%;
+        }
+        .process{
+            display: none !important;
+        }
+        /* Process */
+        /* .process{
+            height: 210vh !important;
+        }
+        .pr-hd{
+            margin-left: 100% !important;
+            margin-top: -300px !important;
+        }
+        .mr-hd{
+            width: 150px !important;
+        }
+        .mr-hd-1{
+            margin-right: 20px !important;
+        }
+        .mr-p{
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            margin-left: 30px !important;
+        }
+        .mrr{
+            position: relative;
+            left: 100px;
+        }
+        .box-1{
+            width: 300px !important;
+            
+        }
+        .box-2{
+            width: 300px !important;
+            
+        }
+        .box-1-1{
+            width: 300px  !important;
+            margin-top: 30px !important;
+        }
+        .box-2-1{
+            width: 300px !important;
+        }
+        .box-texts{
+            margin-top: -100px;
+            line-height: 1;
+        }
+        .box-texts-2{
+            line-height: 1;
+            margin-top: -120px !important;
+            
+        }
+        .box-texts-3{
+            line-height: 1;
+            margin-top: -20px;
+        }
+        .box-texts-4{
+            line-height: 1;
+            margin-top: -120px !important;
+        }
+        .circle{
+            display: ;
+        }
+        }
+        .hi{
+            display: none;
+        } */
+        /* Contact */
+
+        .line-cont-1{
+            width: 20vw !important;
+            position: relative;
+            left: -30px !important;
+           
+        }
+        .line-cont-2{
+            width: 10vw !important;
+            position: relative;
+            right: 45px !important;
+        }
+}
+
+@media  (min-width: 991px) {
+    .menu-toggle{
+        display: none !important;
+    }
+}
+
+@media  (min-width: 1023px) and (max-width : 1339px){
+    .intro{
+        height: 70vh !important;
+    }
+    .about{
+        height: 110vh !important;
+    }
+    .services{
+        height: 130vh !important;
+    }
+    .know-more{
+        height: 90vh !important;
+    }
+    .quote{
+        height: 80vh !important;
+    }
+    .process{
+        height: 260vh !important;
+       
+    }
+    .process-content{
+        margin-top: 0% !important;
+    }
+    .faq{
+        height: 110vh !important;
+    }
+    .footer{
+        height: 15vh !important;
+    }
+} 
+
+@media (min-width : 1340px) and (max-width : 2000px){
+    .intro{
+        height : 100vh !important;
+    }
+    .services{
+        height: 160vh !important;
+    }
+    .quote{
+        height: 70vh !important;
+    }
+    .process{
+        height: 290vh !important;
+    }
+    .faq{
+        height: 130vh !important;
+    }
+}
+@media (min-width : 2560px) {
+    .intro{
+        height: 80vh !important;
+    }
+    .intro1{
+        margin-top: 40% !important;
+        scale: 1.4 !important;
+        margin-left: -50% !important;
+    }
+    .intro img{
+        margin-top: 20% !important;
+        margin-right: -40% !important;
+        scale: 1.3;
+        
+    }
+    .logo{
+        scale: 1.5;
+        margin-top: 30% !important;
+    }
+    .nav-link{
+        scale: 1.3 !important;
+       
+    }
+    .about{
+        height: 100vh !important;
+    }
+    .about img{
+        scale: 1.7;
+        margin-right : 90% !important;
+        margin-top: 40% !important;
+    }
+    .about2{
+        margin-right: -50% !important;
+        margin-top: 20% !important;
+        scale: 1.3;
+    }
+    .services{
+        height: 130vh !important;
+    }
+    .services-content{
+        margin-top: 20% !important;
+        scale: 1.5;
+    }
+    .services-hd{
+        scale: 1.4;
+    }
+    .km-2{
+        scale: 1.5;
+        margin-left: 30% !important;
+        margin-top: 25% !important;
+    }
+    .quote-content{
+        scale: 1.7;
+    }
+    .faq{
+        height: 100vh !important;
+    }
+    .faq-hd{
+        scale: 1.7;
+    }
+    .faq-item{
+        scale: 1.7;
+        margin-bottom: 85px;
+        margin-top: 80px !important;
+    }
+    .i-cont-1,.i-cont-2{
+        scale: 1.3;
+        margin-top: 10% !important;
+    }
+    .contact{
+        height: 110vh !important;
+    }
+    .contact-section{
+        gap: 300px !important;
+    }
+    .process{
+        display: none !important;
+    }
+}
+@media (min-width : 320px) and (max-width : 374px){
+    .nav{
+        height: 15vh !important;
+        overflow: hidden;
+       
+    }
+    .menu-toggle{
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .intro{
+        height: 115vh !important;
+        overflow: hidden;
+    }
+    .intro img{
+        scale: .8;
+        margin-top: 30%;
+        
+    }
+    .intro1{
+        margin-top: -30% !important;
+    }
+    .txt-1{
+        font-size: 1.6rem !important;
+    }
+    .intro3{
+        display: none !important;
+    }
+    .about{
+        height: 182vh !important;
+         scale: .8 !important;
+    }
+    .about-hd{
+        margin-top: -30% !important;
+    }
+    .about-content {
+       margin-top: 20% !important;
+    }
+    .about-content h3{
+        font-size: 1rem !important;
+        scale: 1.5;
+        margin-left: 16% !important;
+        margin-bottom: 10% !important;
+    }
+    .services{
+        
+        height: 260vh !important;
+        overflow: hidden;
+    }
+    .services-content{
+        scale: .8;
+        margin-top: -30% !important;
+    }
+    .know-more{
+        display: none !important;
+    }
+    .quote{
+        height: 100vh !important;
+    }
+    .quote-content{
+        scale: .9;
+    }
+    .faq{
+        height: 160vh !important;
+    }
+}
+@media (min-width : 375px) and (max-width : 424px){
+
+    .nav{
+        height: 15vh !important;
+        overflow: hidden;
+    }
+    .menu-toggle{
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .intro{
+        height: 115vh !important;
+    }
+    .intro img{
+        scale: .8;
+        margin-top: 30%;
+        
+    }
+    .intro1{
+        margin-top: -30% !important;
+    }
+    .txt-1{
+        font-size: 1.6rem !important;
+    }
+    .intro3{
+        display: none !important;
+    }
+    .about{
+        height: 170vh !important;
+        scale: .8 !important;
+    }
+    .about-hd{
+        margin-top: -30% !important;
+    }
+    .about-content {
+       margin-top: 10% !important;
+    }
+    .about-content h3{
+        font-size: 1rem !important;
+        scale: 1.5;
+        margin-left: 16% !important;
+        margin-bottom: 10% !important;
+    }
+    .services{
+        
+        height: 250vh !important;
+        overflow: hidden;
+    }
+    .services-content{
+        scale: .8;
+        margin-top: -30% !important;
+    }
+    .know-more{
+        display: none !important;
+    }
+    .quote{
+        height: 80vh !important;
+    }
+    .quote-content{
+        scale: .9;
+    }
+    .faq{
+        height: 160vh !important;
+    }
+}
+@media (min-width : 425px) and (max-width : 524px){
+
+    .nav{
+        height: 15vh !important;
+        overflow: hidden;
+       
+    }
+    .menu-toggle{
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .intro{
+        height: 115vh !important;
+        overflow: hidden;
+    }
+    .intro img{
+        scale: .8;
+        margin-top: 20%;
+        
+    }
+    .intro1{
+        margin-top: -20% !important;
+    }
+    .txt-1{
+        font-size: 1.6rem !important;
+    }
+    .intro3{
+        display: none !important;
+    }
+    .about{
+        height: 182vh !important;
+         scale: .8 !important;
+    }
+    .about-hd{
+        margin-top: -20% !important;
+    }
+    .about-content {
+       margin-top: 10% !important;
+    }
+    .about-content h3{
+        font-size: 1rem !important;
+        scale: 1.5;
+        margin-left: 16% !important;
+        margin-bottom: 10% !important;
+    }
+    .services{
+        height: 250vh !important;
+        overflow: hidden;
+    }
+    .services-content{
+        scale: .8;
+        margin-top: -30% !important;
+    }
+    .know-more{
+        display: none !important;
+    }
+    .quote{
+        height: 80vh !important;
+    }
+    .quote-content{
+        scale: .9;
+    }
+    .faq{
+        height: 160vh !important;
+        overflow: hidden;   
+    }
+}
+@media  (min-width: 768px) and (max-width : 900px){
+    .intro{
+        height: 100vh !important;
+    }
+    .intro img{
+        margin-top: 0% !important;
+    }
+    .txt-1{
+        font-size: 1.7rem !important;
+        scale: 1.2;
+        margin-left: 9% !important;
+    }
+    .txt-2{
+        font-size: 1.2rem !important;
+    }
+    .logo{
+        margin-left: 20% !important;
+    }
+    
+    .about{
+        height: 170vh !important;
+    }
+    .about2{
+        scale: .9;
+    }
+    .about img{
+        scale: 1.4;
+        margin-left: 10% !important;
+    }
+    .services{
+        height: 185vh !important;
+    }
+    .know-more{
+        display: none !important;
+    }
+    .quote{
+        height: 80vh !important;
+    }
+    .quote-content{
+        scale: .9;
+    }
+    .process{
+       display: none;
+    }
+    .process-content{
+        margin-top: 10% !important;
+    }
+    .faq{
+        height: 150vh !important;
+    }
+    .footer{
+        height: 15vh !important;
+    }
+} 
+@media (min-width : 400px) and (max-width :450px ) {
+    .nav{
+        height: 10vh !important;
+    }
+    .intro{
+        height: 60vh !important;
+    }
+    .about{
+        height: 85vh !important;
+    }
+    .services{
+        height: 125vh !important;
+    }
+    .quote{
+        height: 40vh !important;
+    }
+    .faq{
+        height: 75vh !important;
+    }
+    .contact{
+        height: 210vh !important;
+    }
+    .footer{
+        display: none !important;
+    }
+}
+
+@media (min-width : 344px) and (max-width :370px ) {
+     .nav{
+        height: 10vh !important;
+    }
+    .intro{
+        height: 80vh !important;
+    }
+    .about{
+        height: 110vh !important;
+    }
+    .services{
+        height: 158vh !important;
+    }
+    .quote{
+        height: 40vh !important;
+    }
+    .faq{
+        height: 107vh !important;
+    }
+    .contact{
+        height: 250vh !important;
+    }
+    .footer{
+        display: none !important;
+    }
+}
+@media (min-width : 371px) and (max-width :400px ) {
+     .nav{
+        height: 10vh !important;
+    }
+    .intro{
+        height: 80vh !important;
+    }
+    .about{
+        height: 110vh !important;
+    }
+    .services{
+        height: 160vh !important;
+    }
+    .quote{
+        height: 40vh !important;
+    }
+    .faq{
+        height: 110vh !important;
+    }
+    .contact{
+        height: 260vh !important;
+    }
+    .footer{
+        display: none !important;
+    }
+}
